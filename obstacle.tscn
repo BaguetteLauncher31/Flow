@@ -2,14 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://csxqe7ban8w6p" path="res://Screenshot 2026-10-10 173039.png" id="1_sl1jc"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6t334"]
-size = Vector2(33, 32)
+[node name="test movement" type="StaticBody2D" unique_id=1538001761]
 
-[node name="StaticBody2D" type="StaticBody2D" unique_id=1642122642]
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=473688136]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=480238109]
+position = Vector2(1386, 476.125)
+scale = Vector2(0.40853658, 0.20965177)
 texture = ExtResource("1_sl1jc")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1884420067]
-position = Vector2(-6.5, -6)
-shape = SubResource("RectangleShape2D_6t334")

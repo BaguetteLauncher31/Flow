@@ -42,17 +42,6 @@ texture = ExtResource("3_e2u21")
 position = Vector2(112, 197)
 shape = SubResource("RectangleShape2D_ubmik")
 
-[node name="test movement" type="StaticBody2D" parent="." unique_id=1001053089]
-
-[node name="Sprite2D" type="Sprite2D" parent="test movement" unique_id=800151529]
-position = Vector2(1386, 476.125)
-scale = Vector2(0.40853658, 0.20965177)
-texture = ExtResource("4_e2u21")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="test movement" unique_id=1364838806]
-position = Vector2(1386, 476.25)
-shape = SubResource("RectangleShape2D_sbk8j")
-
 [node name="test movement2" type="StaticBody2D" parent="." unique_id=1477879398]
 position = Vector2(1105, -356)
 
@@ -124,7 +113,3 @@ text = "Score: "
 horizontal_alignment = 1
 script = ExtResource("7_qn3nj")
 player = NodePath("../../../Player")
-
-[node name="Node" type="Node" parent="." unique_id=1145212897]
-
-[node name="StaticBody2D" parent="Node" unique_id=1642122642 instance=ExtResource("2_l6pdb")]

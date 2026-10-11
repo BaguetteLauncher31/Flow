@@ -11,6 +11,9 @@ func _process(delta: float) -> void:
 		spawntimer = 0.0
 		
 		if obstacle_scene and player:
-			var obstacle = obstacle_scene.instantiate()
-			obstacle.global_position = Vector2(player.global_position.x + 800, randf_range(100, 500))
+			var obstacle: Node2D = obstacle_scene.instantiate()
+			obstacle.global_position = Vector2(player.global_position.x + 600, randf_range(100, 500))
 			add_child(obstacle)
+			print("spawned: ", obstacle.global_position)
+		else: 
+			push_warning("player not assigned")
