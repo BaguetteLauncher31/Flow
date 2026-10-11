@@ -3,9 +3,13 @@
 [ext_resource type="Script" uid="uid://dcpvwnj4fqftw" path="res://node.gd" id="1_sy5k4"]
 [ext_resource type="Script" uid="uid://dacsq6ems7l4q" path="res://player.gd" id="2_112p8"]
 [ext_resource type="Texture2D" uid="uid://dc7p74obpdky3" path="res://icon.svg" id="3_e2u21"]
+[ext_resource type="Texture2D" uid="uid://csxqe7ban8w6p" path="res://Screenshot 2026-10-10 173039.png" id="4_e2u21"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubmik"]
 size = Vector2(83, 82)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sbk8j"]
+size = Vector2(67, 66.5)
 
 [node name="Node" type="Node" unique_id=170336274]
 script = ExtResource("1_sy5k4")
@@ -25,3 +29,14 @@ shape = SubResource("RectangleShape2D_ubmik")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=993930465]
 position = Vector2(583, 214)
+
+[node name="test movement" type="StaticBody2D" parent="." unique_id=1001053089]
+
+[node name="Sprite2D" type="Sprite2D" parent="test movement" unique_id=800151529]
+position = Vector2(1386, 476.125)
+scale = Vector2(0.40853658, 0.20965177)
+texture = ExtResource("4_e2u21")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="test movement" unique_id=1364838806]
+position = Vector2(1386, 476.25)
+shape = SubResource("RectangleShape2D_sbk8j")
