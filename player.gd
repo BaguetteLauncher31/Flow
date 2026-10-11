@@ -26,3 +26,4 @@ func _physics_process(delta: float) -> void:
 		global_position = start_position
 	
 	global_position.y = clamp(global_position.y, -283, 283)
+	

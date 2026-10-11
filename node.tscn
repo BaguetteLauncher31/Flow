@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dcpvwnj4fqftw" path="res://node.gd" id="1_sy5k4"]
 [ext_resource type="Script" uid="uid://dacsq6ems7l4q" path="res://player.gd" id="2_112p8"]
+[ext_resource type="PackedScene" uid="uid://bclbfs7ep2fd0" path="res://obstacle.tscn" id="2_l6pdb"]
 [ext_resource type="Script" uid="uid://c0i3p03oesqr1" path="res://camera_2d.gd" id="2_tda05"]
 [ext_resource type="Texture2D" uid="uid://dc7p74obpdky3" path="res://icon.svg" id="3_e2u21"]
 [ext_resource type="Texture2D" uid="uid://csxqe7ban8w6p" path="res://Screenshot 2026-10-10 173039.png" id="4_e2u21"]
@@ -14,8 +15,10 @@ size = Vector2(83, 82)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sbk8j"]
 size = Vector2(67, 66.5)
 
-[node name="Node" type="Node" unique_id=170336274]
+[node name="Node" type="Node" unique_id=170336274 node_paths=PackedStringArray("player")]
 script = ExtResource("1_sy5k4")
+obstacle_scene = ExtResource("2_l6pdb")
+player = NodePath("Player")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1390008914]
 position = Vector2(-6, 110)
@@ -121,3 +124,7 @@ text = "Score: "
 horizontal_alignment = 1
 script = ExtResource("7_qn3nj")
 player = NodePath("../../../Player")
+
+[node name="Node" type="Node" parent="." unique_id=1145212897]
+
+[node name="StaticBody2D" parent="Node" unique_id=1642122642 instance=ExtResource("2_l6pdb")]
