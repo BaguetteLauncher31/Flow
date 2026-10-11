@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dc7p74obpdky3" path="res://icon.svg" id="3_e2u21"]
 [ext_resource type="Texture2D" uid="uid://csxqe7ban8w6p" path="res://Screenshot 2026-10-10 173039.png" id="4_e2u21"]
 [ext_resource type="Texture2D" uid="uid://bsdtvb6cv01gu" path="res://Screenshot 2026-10-10 175118.png" id="5_bss38"]
+[ext_resource type="Script" uid="uid://dgd5e8vggwlrr" path="res://score.gd" id="7_qn3nj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubmik"]
 size = Vector2(83, 82)
@@ -96,3 +97,27 @@ texture = ExtResource("4_e2u21")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="test movement5" unique_id=1147239530]
 position = Vector2(1386, 476.25)
 shape = SubResource("RectangleShape2D_sbk8j")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=397465529]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1462471060]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="score" type="Label" parent="CanvasLayer/Control" unique_id=1958376635 node_paths=PackedStringArray("player")]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 530.0
+offset_right = 582.0
+offset_bottom = 23.0
+grow_horizontal = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 30)
+text = "Score: "
+horizontal_alignment = 1
+script = ExtResource("7_qn3nj")
+player = NodePath("../../../Player")

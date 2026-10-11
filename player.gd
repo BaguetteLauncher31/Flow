@@ -2,6 +2,11 @@ extends CharacterBody2D
 
 
 const SPEED = 700.0
+var start_position = Vector2.ZERO
+
+func _ready() -> void:
+	start_position = global_position
+
 
 func _physics_process(delta: float) -> void:
 	
@@ -16,3 +21,8 @@ func _physics_process(delta: float) -> void:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 
 	move_and_slide()
+	
+	if get_slide_collision_count() > 0:
+		global_position = start_position
+	
+	global_position.y = clamp(global_position.y, -283, 283)
