@@ -5,15 +5,18 @@
 [ext_resource type="PackedScene" uid="uid://bclbfs7ep2fd0" path="res://obstacle.tscn" id="2_l6pdb"]
 [ext_resource type="Script" uid="uid://c0i3p03oesqr1" path="res://camera_2d.gd" id="2_tda05"]
 [ext_resource type="Texture2D" uid="uid://dc7p74obpdky3" path="res://icon.svg" id="3_e2u21"]
+[ext_resource type="PackedScene" uid="uid://da8ahsewkpqxu" path="res://bonus.tscn" id="3_l6pdb"]
 [ext_resource type="Texture2D" uid="uid://bsdtvb6cv01gu" path="res://Screenshot 2026-10-10 175118.png" id="5_bss38"]
 [ext_resource type="Script" uid="uid://dgd5e8vggwlrr" path="res://score.gd" id="7_qn3nj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubmik"]
 size = Vector2(83, 82)
 
-[node name="Node" type="Node" unique_id=170336274 node_paths=PackedStringArray("player")]
+[node name="Node" type="Node" unique_id=170336274 node_paths=PackedStringArray("score_node", "player")]
 script = ExtResource("1_sy5k4")
 obstacle_scene = ExtResource("2_l6pdb")
+bonus_scene = ExtResource("3_l6pdb")
+score_node = NodePath("CanvasLayer/Control/score")
 player = NodePath("Player")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1390008914]

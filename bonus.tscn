@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://da8ahsewkpqxu"]
+
+[ext_resource type="Script" uid="uid://cq6ooun7mdqlp" path="res://bonus.gd" id="1_7ah8e"]
+[ext_resource type="Texture2D" uid="uid://cis3vdyhbushp" path="res://Screenshot 2026-10-11 180130.png" id="1_e6yrp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ubmik"]
+size = Vector2(76.05158, 80)
+
+[node name="Area2D" type="Area2D" unique_id=868764642]
+script = ExtResource("1_7ah8e")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1012843780]
+position = Vector2(434, 239)
+scale = Vector2(1.148943, 1.2121211)
+texture = ExtResource("1_e6yrp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1653661247]
+position = Vector2(434, 239)
+scale = Vector2(1.0256196, 1)
+shape = SubResource("RectangleShape2D_ubmik")
