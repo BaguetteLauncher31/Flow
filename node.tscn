@@ -5,15 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://bclbfs7ep2fd0" path="res://obstacle.tscn" id="2_l6pdb"]
 [ext_resource type="Script" uid="uid://c0i3p03oesqr1" path="res://camera_2d.gd" id="2_tda05"]
 [ext_resource type="Texture2D" uid="uid://dc7p74obpdky3" path="res://icon.svg" id="3_e2u21"]
-[ext_resource type="Texture2D" uid="uid://csxqe7ban8w6p" path="res://Screenshot 2026-10-10 173039.png" id="4_e2u21"]
 [ext_resource type="Texture2D" uid="uid://bsdtvb6cv01gu" path="res://Screenshot 2026-10-10 175118.png" id="5_bss38"]
 [ext_resource type="Script" uid="uid://dgd5e8vggwlrr" path="res://score.gd" id="7_qn3nj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubmik"]
 size = Vector2(83, 82)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sbk8j"]
-size = Vector2(67, 66.5)
 
 [node name="Node" type="Node" unique_id=170336274 node_paths=PackedStringArray("player")]
 script = ExtResource("1_sy5k4")
@@ -41,54 +37,6 @@ texture = ExtResource("3_e2u21")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1453485210]
 position = Vector2(112, 197)
 shape = SubResource("RectangleShape2D_ubmik")
-
-[node name="test movement2" type="StaticBody2D" parent="." unique_id=1477879398]
-position = Vector2(1105, -356)
-
-[node name="Sprite2D" type="Sprite2D" parent="test movement2" unique_id=452145163]
-position = Vector2(1386, 476.125)
-scale = Vector2(0.40853658, 0.20965177)
-texture = ExtResource("4_e2u21")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="test movement2" unique_id=700239174]
-position = Vector2(1386, 476.25)
-shape = SubResource("RectangleShape2D_sbk8j")
-
-[node name="test movement3" type="StaticBody2D" parent="." unique_id=444113511]
-position = Vector2(807, -70)
-
-[node name="Sprite2D" type="Sprite2D" parent="test movement3" unique_id=1883452365]
-position = Vector2(1386, 476.125)
-scale = Vector2(0.40853658, 0.20965177)
-texture = ExtResource("4_e2u21")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="test movement3" unique_id=1221645945]
-position = Vector2(1386, 476.25)
-shape = SubResource("RectangleShape2D_sbk8j")
-
-[node name="test movement4" type="StaticBody2D" parent="." unique_id=2105761405]
-position = Vector2(466, -263)
-
-[node name="Sprite2D" type="Sprite2D" parent="test movement4" unique_id=714993737]
-position = Vector2(1386, 476.125)
-scale = Vector2(0.40853658, 0.20965177)
-texture = ExtResource("4_e2u21")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="test movement4" unique_id=962551017]
-position = Vector2(1386, 476.25)
-shape = SubResource("RectangleShape2D_sbk8j")
-
-[node name="test movement5" type="StaticBody2D" parent="." unique_id=1957051466]
-position = Vector2(1372, 97)
-
-[node name="Sprite2D" type="Sprite2D" parent="test movement5" unique_id=1355884434]
-position = Vector2(1386, 476.125)
-scale = Vector2(0.40853658, 0.20965177)
-texture = ExtResource("4_e2u21")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="test movement5" unique_id=1147239530]
-position = Vector2(1386, 476.25)
-shape = SubResource("RectangleShape2D_sbk8j")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=397465529]
 
