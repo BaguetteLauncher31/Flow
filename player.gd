@@ -22,9 +22,5 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
-	if get_slide_collision_count() > 0:
-		global_position = start_position
-		get_tree().reload_current_scene()
-	
 	global_position.y = clamp(global_position.y, -283, 283)
 	

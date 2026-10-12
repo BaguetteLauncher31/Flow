@@ -5,6 +5,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubmik"]
 size = Vector2(66, 66)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6t334"]
+size = Vector2(11, 65)
+
 [node name="Area 2D" type="StaticBody2D" unique_id=1538001761]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=480238109]
@@ -15,3 +18,10 @@ texture = ExtResource("1_sl1jc")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=815738647]
 position = Vector2(533, 391)
 shape = SubResource("RectangleShape2D_ubmik")
+
+[node name="FrontBumper" type="Area2D" parent="." unique_id=1547825536]
+position = Vector2(436, 350)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FrontBumper" unique_id=1112338617]
+position = Vector2(69, 41)
+shape = SubResource("RectangleShape2D_6t334")
